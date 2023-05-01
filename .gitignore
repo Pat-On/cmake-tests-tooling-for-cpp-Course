@@ -1,2 +1,4 @@
 # ignoring all build folders wherever they are
 **/build
+
+.vscode
