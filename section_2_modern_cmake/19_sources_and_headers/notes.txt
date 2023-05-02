@@ -1,0 +1,2 @@
+This version of project is showing us how to optimize the CMake when you are using
+a lot of source and header files
