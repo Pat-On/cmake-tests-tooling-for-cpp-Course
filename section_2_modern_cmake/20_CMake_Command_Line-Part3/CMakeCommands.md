@@ -63,7 +63,6 @@ cmake -DMY_OPTION=[ON|OFF] ..
 
 ## --------------------------------- SPECIFIC TARGETS TO COMPILE ---------------------------------------
 
-
 ## Specify the Build Target (Option 1)
 
 The standard build command would build all created targets within the CMakeLists.
