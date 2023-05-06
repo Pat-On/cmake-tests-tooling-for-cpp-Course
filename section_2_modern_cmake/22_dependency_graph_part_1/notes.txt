@@ -1,0 +1,7 @@
+
+dependency:
+	cd build && cmake .. --graphvix=grap.dot && dot -Tpng graph.dot -o graphImage.png
+
+
+
+install graphvix and then output png - simple
