@@ -1,0 +1,7 @@
+HTML Documentation for our project
+
+doxygen -g
+
+cd docs
+
+doxygen
