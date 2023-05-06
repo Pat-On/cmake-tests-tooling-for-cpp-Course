@@ -1,0 +1,6 @@
+git init
+git submodule add https://github.com/nlohmann/json
+
+
+TODO: Need to check configuration of CMake!
+TODO: VISUAL STUDIO CONFIGURATION TO FIX
