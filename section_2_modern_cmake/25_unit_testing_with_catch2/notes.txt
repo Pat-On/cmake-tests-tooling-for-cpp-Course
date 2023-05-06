@@ -1,0 +1,6 @@
+We are going to have two executable
+
+
+Main <----- lib ----------> unit
+
+both of these executable are going to use our library

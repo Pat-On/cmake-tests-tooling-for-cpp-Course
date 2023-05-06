@@ -1,26 +1,46 @@
-cmake_minimum_required(VERSION 3.16)
 
-project(CppProjectTemplate VERSION 1.0.0 LANGUAGES C CXX)
+# 0 create source and cmakefile
+# 1 mkdir build
+# 2 cd build
+# 3 cmake .. <-- generating the build files / configure the project
+# 4 cmake --build .
+# 5 ./Executable
 
-set(CMAKE_CXX_STANDARD          17)
+cmake_minimum_required(VERSION 3.22)
+
+project(
+    CppProjectTemplate
+    VERSION 1.0.0
+    LANGUAGES C CXX
+)
+
+
+
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS        OFF)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
+option(ENABLE_TESTING "Enable a unit testing build" ON)
 
-set(LIBRARY_NAME Library)
+
+set(LIBRARY_NAME Library) 
 set(EXECUTABLE_NAME Executable)
 
-set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
-include(AddGitSubmodule)
-include(FetchContent)
-include(Docs)
+set(CMAKE_MODULE_PATH, "${PROJECT_SOURCE_DIR}/cmake/")
+include(FetchContent) # this function is included in the modern c++ proiject
+# include(Docs)
 
+
+# If you have repositories that you want to include in projet but are not cmake you need to use method from the video 21 - gitsubmodule
+
+# git lab is going to be clone into out boot directory - use for CMake reposityr
 FetchContent_Declare(
     nlohmann_json
     GIT_REPOSITORY https://github.com/nlohmann/json
     GIT_TAG v3.11.2
-    GIT_SHALLOW TRUE)
+    GIT_SHALLOW TRUE
+)
+# this functions is going to load the library into our project
 FetchContent_MakeAvailable(nlohmann_json)
 
 FetchContent_Declare(
@@ -44,6 +64,7 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(cxxopts)
 
+# Testing library
 FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2
@@ -53,7 +74,8 @@ FetchContent_MakeAvailable(Catch2)
 
 add_subdirectory(configured)
 add_subdirectory(external)
-add_subdirectory(src)
+add_subdirectory(src) 
 add_subdirectory(app)
 add_subdirectory(tests)
-    
+
+
