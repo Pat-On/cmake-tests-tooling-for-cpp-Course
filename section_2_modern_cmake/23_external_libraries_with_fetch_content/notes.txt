@@ -1,0 +1,9 @@
+In general use:
+git submodule
+
+
+if it is Gitlab problem not Cmake - gitlab modules
+
+
+
+FetchContent - > for all Cmake projects
