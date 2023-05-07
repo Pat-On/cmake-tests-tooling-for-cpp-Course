@@ -115,6 +115,7 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "cSpell.words": [
     "DCMAKE",
-    "MSVC"
+    "MSVC",
+    "spdlog"
   ]
 }
