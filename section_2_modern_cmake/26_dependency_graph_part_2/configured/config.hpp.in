@@ -1,0 +1,17 @@
+// extension in indicate that cmake is going to modify or at least copy this file
+#pragma once
+
+#include <cstdint>
+#include <string_view>
+
+// @ tell cmake to later on replace this text by project name for example from main cmake file
+// 5 the most important variables to define - tutor opinion
+static constexpr std::string_view project_name = "@PROJECT_NAME@";
+static constexpr std::string_view project_version = "@PROJECT_VERSION@";
+
+static constexpr std::int32_t project_version_major {@PROJECT_VERSION_MAJOR@};
+static constexpr std::int32_t project_version_minor {@PROJECT_VERSION_MINOR@};
+static constexpr std::int32_t project_version_patch {@PROJECT_VERSION_PATCH@};
+
+// you can store here many different variables: check CMakeCache.txt file to see how many predefined variables exists
+//  or refer to documentation
