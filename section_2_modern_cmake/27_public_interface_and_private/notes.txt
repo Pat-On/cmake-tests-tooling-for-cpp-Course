@@ -1,0 +1,29 @@
+Different Linking Types
+
+target_link_libraries(A PUBLIC fmt)
+target_link_libraries(B PRIVATE spdlog)
+
+target_link_libraries(C PUBLIC/PRIVATE A)
+
+
+
+PUBLIC
+------------------------------------------------------------------------------
+
+When A links fmt as PUBLIC, it say that A uses fmt in its implementation, and fmt is also used in A's public API. 
+Hence, C can use fmt since it is part of the public API of API
+
+
+PRIVATE (you are not making it public to other part of project etc)
+------------------------------------------------------------------------------
+
+When B links spdlog as PRIVATE, is is saying that A uses spdlog in its implementation, but spdlog is not used in any part of A's public API.
+
+
+INTERFACE
+------------------------------------------------------------------------------
+
+add_library(D INTERFACE)
+target_link_libraries(D INTERFACE {CMAKE_CURRENT_SOURCE_DIR}/include)
+
+In general, used for header-only target_link_libraries
