@@ -14,6 +14,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Options
 option(USE_CONAN "Whether to use conan" ON) # only one can be active
 option(USE_VCPKG "Whether to use vcpkg" OFF)
+# conan has prebuild binary - vcpkg has no prebuild
+# vcpkg will fetch repo to some tempo folder and build it there
 
 option(ENABLE_WARNINGS "Enable to add warnings to a target." ON)
 option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
