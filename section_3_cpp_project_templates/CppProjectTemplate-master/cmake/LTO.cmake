@@ -1,5 +1,7 @@
 function(target_enable_lto)
     set(oneValueArgs TARGET ENABLE)
+    # These variable are going to have attaches LTO_TARGET LTO_ENABLE
+    # https://cmake.org/cmake/help/latest/command/cmake_parse_arguments.html
     cmake_parse_arguments(
         LTO
         "${options}"

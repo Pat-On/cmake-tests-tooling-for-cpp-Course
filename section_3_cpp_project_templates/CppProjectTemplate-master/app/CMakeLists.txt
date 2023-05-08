@@ -12,8 +12,12 @@ target_link_libraries(
         cxxopts::cxxopts)
 
 if (${ENABLE_WARNINGS})
+    # much more easier to read and understand what is going on
+    # check cmake/Warning.cmake
     target_set_warnings(
+    # param name
     TARGET
+    # value
     ${EXECUTABLE_NAME}
     ENABLE
     ${ENABLE_WARNINGS}

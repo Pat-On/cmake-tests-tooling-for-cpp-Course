@@ -1,5 +1,7 @@
 function(target_set_warnings)
     set(oneValueArgs TARGET ENABLE AS_ERRORS)
+    # example of multi
+    # set(multiValueArgs TARGET ENABLE AS_ERRORS)
     cmake_parse_arguments(
         TARGET_SET_WARNINGS
         "${options}"
