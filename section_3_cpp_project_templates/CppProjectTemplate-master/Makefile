@@ -34,3 +34,7 @@ conan_r:
 	rm -rf build
 	mkdir build
 	cd build && conan install .. -s build_type=Release $(CONAN_FLAGS)
+
+# prebuild in conan - most of the libraries that are in conan baase that are in release based
+# they are already in binary format so you do not have to build them on our system
+# Binary Packages

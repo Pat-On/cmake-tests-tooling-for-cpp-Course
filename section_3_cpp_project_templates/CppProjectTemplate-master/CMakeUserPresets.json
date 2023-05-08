@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/home/pat/projects/cmake-tests-tooling-for-cpp-Course/section_3_cpp_project_templates/CppProjectTemplate-master/build/CMakePresets.json"
+    ]
+}
