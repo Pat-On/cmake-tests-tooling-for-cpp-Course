@@ -1,0 +1,21 @@
+Git
+- use only if library is not CMAKE project
+
+Fetch
+- easy          +
+- no complicated cmake  +
+- repo must be CMAKE project    -
+
+
+VCPKG
+- not easy      -
+- clone         -
+- register      +
+
+
+CONAN
+- outdated (what?) they promised update 2023 (check it out) -
+https://www.reddit.com/r/cpp/comments/11xj8np/conan_package_manager_completely_broken_after_20/
+- easy          +
+- fast          +
+- python pkg    +
