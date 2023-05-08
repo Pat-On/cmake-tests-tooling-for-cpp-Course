@@ -1,3 +1,4 @@
+# cmake-format targeting and turning on
 function(add_cmake_format_target)
     if(NOT ${ENABLE_CMAKE_FORMAT})
         return()
@@ -24,7 +25,7 @@ function(add_cmake_format_target)
                 cmake-format
                 -c
                 ${CMAKE_SOURCE_DIR}/.cmake-format.yaml
-                -i
+                -i # "visibility"
                 ${cmake_file})
         endforeach()
         add_custom_target(
@@ -36,6 +37,7 @@ function(add_cmake_format_target)
     endif()
 endfunction()
 
+# clang-format again working with Python
 function(add_clang_format_target)
     if(NOT ${ENABLE_CLANG_FORMAT})
         return()
@@ -96,7 +98,8 @@ function(add_clang_tidy_to_target target)
         if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
             message(STATUS "Added MSVC ClangTidy (VS GUI only) for: ${target}")
             set_target_properties(
-                ${target} PROPERTIES VS_GLOBAL_EnableMicrosoftCodeAnalysis false)
+                ${target} PROPERTIES VS_GLOBAL_EnableMicrosoftCodeAnalysis
+                                     false)
             set_target_properties(
                 ${target} PROPERTIES VS_GLOBAL_EnableClangTidyCodeAnalysis true)
         else()
