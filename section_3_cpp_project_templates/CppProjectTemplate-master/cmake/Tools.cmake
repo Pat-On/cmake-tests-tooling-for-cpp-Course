@@ -75,6 +75,7 @@ function(add_clang_format_target)
     endif()
 endfunction()
 
+# is adding clang-tidy it run on Python scripts
 function(add_clang_tidy_to_target target)
     get_target_property(TARGET_SOURCES ${target} SOURCES)
     list(
