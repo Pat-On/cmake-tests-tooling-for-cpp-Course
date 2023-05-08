@@ -5,6 +5,8 @@ all: prepare
 install_min:
 	sudo apt-get install gcc g++ cmake make doxygen
 
+# gcovr - is creating intermediate represenatiuon of debugger information - lcov parse it to html files
+
 install_tests: install_min
 	sudo apt-get install gcovr lcov
 
