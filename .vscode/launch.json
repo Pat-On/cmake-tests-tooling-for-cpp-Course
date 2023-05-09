@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/pat/projects/cmake-tests-tooling-for-cpp-Course/section_2_modern_cmake/14_basic_project_structure",
-      "program": "/home/pat/projects/cmake-tests-tooling-for-cpp-Course/section_2_modern_cmake/14_basic_project_structure/build/Release/outRelease",
+      "cwd": "/home/pat/projects/cmake-tests-tooling-for-cpp-Course/section_3_cpp_project_templates",
+      "program": "/home/pat/projects/cmake-tests-tooling-for-cpp-Course/section_3_cpp_project_templates/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
