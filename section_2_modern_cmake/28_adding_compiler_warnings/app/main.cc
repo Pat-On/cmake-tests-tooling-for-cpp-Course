@@ -1,15 +1,14 @@
 #include <iostream>
 
-#include "my_lib.h" // compilation unit
-#include "config.hpp"
-
 #include <cxxopts.hpp>
 #include <nlohmann/json.hpp>
 #include <fmt/format.h>
 #include <spdlog/spdlog.h>
 
+#include "my_lib.h"
+#include "config.hpp"
 
-int main () 
+int main()
 {
     std::cout << project_name << '\n';
     std::cout << project_version << '\n';
@@ -35,5 +34,4 @@ int main ()
     print_hello_world();
 
     return 0;
-
 }
