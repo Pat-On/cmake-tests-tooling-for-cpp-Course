@@ -17,11 +17,12 @@ function(target_set_warnings TARGET ENABLED ENABLED_AS_ERRORS)
         ${CLANG_WARNINGS})
 
     if(${ENABLED_AS_ERRORS})
-        set(MSVC_WARNINGS ${MSVC_WARNINGS} /WX)
+        set(MSVC_WARNINGS ${MSVC_WARNINGS} /WX) # appending?
         set(CLANG_WARNINGS ${CLANG_WARNINGS} -Werror)
         set(GCC_WARNINGS ${GCC_WARNINGS} -Werror)
     endif()
 
+    # detectiong current compiler
     if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
         set(WARNINGS ${MSVC_WARNINGS})
     elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -30,6 +31,7 @@ function(target_set_warnings TARGET ENABLED ENABLED_AS_ERRORS)
         set(WARNINGS ${GCC_WARNINGS})
     endif()
 
+    
     target_compile_options(${TARGET} PRIVATE ${WARNINGS})
     message(STATUS ${WARNINGS})
 

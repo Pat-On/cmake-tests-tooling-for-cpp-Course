@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD          17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS        OFF)
 
+
+# HERE WE CAN TORN OFF/ON ALL   
 option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
 
 option(ENABLE_WARNINGS "Enable to add warnings to a target." ON)
