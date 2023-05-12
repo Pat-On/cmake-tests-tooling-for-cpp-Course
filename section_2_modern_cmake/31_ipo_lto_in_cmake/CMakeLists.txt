@@ -14,6 +14,8 @@ option(ENABLE_WARNINGS_AS_ERRORS "Enable compiler warnings as errors" OFF)
 option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
 option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
+option(ENABLE_LTO "Enable LTO" ON)
+
 set(LIBRARY_NAME Library)
 set(EXECUTABLE_NAME Executable)
 
@@ -29,6 +31,10 @@ endif()
 if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     include(Sanitizers)
     add_sanitizer_flags()
+endif()
+
+if(ENABLE_LTO)
+    include(LTO)
 endif()
 
 FetchContent_Declare(

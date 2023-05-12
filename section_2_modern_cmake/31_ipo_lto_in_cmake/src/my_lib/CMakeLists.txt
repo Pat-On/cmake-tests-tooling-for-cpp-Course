@@ -20,3 +20,7 @@ if (ENABLE_WARNINGS)
         OFF
     )
 endif()
+
+if(${ENABLE_LTO})
+    target_enable_lto(${LIBRARY_NAME} ${ENABLE_LTO})
+endif()
